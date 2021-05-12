@@ -9,5 +9,6 @@ public class MessengerFrame extends JFrame {
 
     public static void main(String[] args) {
         MessengerFrame messengerFrame = new MessengerFrame();
+        System.out.println("Hello");
     }
 }
