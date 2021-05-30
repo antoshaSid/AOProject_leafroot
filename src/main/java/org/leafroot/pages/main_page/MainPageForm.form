@@ -29,7 +29,7 @@
             <properties>
               <background color="-13882324"/>
               <maximumSize width="500" height="2147483647"/>
-              <minimumSize width="275" height="24"/>
+              <minimumSize width="300" height="24"/>
               <preferredSize width="350" height="24"/>
             </properties>
             <border type="none"/>

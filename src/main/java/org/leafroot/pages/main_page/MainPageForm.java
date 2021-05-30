@@ -59,8 +59,11 @@ public class MainPageForm {
         private JTextField changePasswordTextField;
         private JButton changePasswordButton;
         private JTextField changePasswordConfirmTextField;
-        private boolean showHintPassword = true;
-        private boolean showHintConfirmPassword = true;
+        private JPanel nicknameChangePanel;
+        private JTextField changeFirstNameTextField;
+        private JTextField changeSurnameTextField;
+        private JButton changeNickNameButton;
+        private JButton logoutButton;
 
         public SettingsForm() {
             exitButton.setBorder(BorderFactory.createEmptyBorder());
@@ -73,49 +76,22 @@ public class MainPageForm {
 
             changePasswordButton.setIcon(new ImageIcon("src/main/resources/imgs/change-password-button.png"));
             changePasswordButton.setBorder(BorderFactory.createEmptyBorder());
+            changeNickNameButton.setIcon(new ImageIcon("src/main/resources/imgs/save-nickname-button.png"));
+            changeNickNameButton.setBorder(BorderFactory.createEmptyBorder());
+            logoutButton.setIcon(new ImageIcon("src/main/resources/imgs/button-log-out.png"));
+            logoutButton.setBorder(BorderFactory.createEmptyBorder());
 
             changePasswordTextField.setBorder(BorderFactory.createEmptyBorder(0,10,0,0));
             changePasswordConfirmTextField.setBorder(BorderFactory.createEmptyBorder(0,10,0,0));
+            changeFirstNameTextField.setBorder(BorderFactory.createEmptyBorder(0,10,0,0));
+            changeSurnameTextField.setBorder(BorderFactory.createEmptyBorder(0,10,0,0));
 
 
-            changePasswordTextField.addFocusListener(new FocusListener() {
-                @Override
-                public void focusGained(FocusEvent e) {
-                    if (showHintPassword) {
-                        changePasswordTextField.setText("");
-                        changePasswordTextField.setForeground(new Color(161,161,161));
-                    }
-                    showHintPassword = false;
-                }
+            changePasswordTextField.addFocusListener(new HintText("New password", changePasswordTextField));
+            changePasswordConfirmTextField.addFocusListener(new HintText("Confirm password", changePasswordConfirmTextField));
+            changeFirstNameTextField.addFocusListener(new HintText("New first name", changeFirstNameTextField));
+            changeSurnameTextField.addFocusListener(new HintText("New surname", changeSurnameTextField));
 
-                @Override
-                public void focusLost(FocusEvent e) {
-                    if (changePasswordTextField.getText().length() == 0) {
-                        changePasswordTextField.setForeground(new Color(80,80,80));
-                        changePasswordTextField.setText("New password");
-                        showHintPassword = true;
-                    }
-                }
-            });
-            changePasswordConfirmTextField.addFocusListener(new FocusListener() {
-                @Override
-                public void focusGained(FocusEvent e) {
-                    if (showHintConfirmPassword) {
-                        changePasswordConfirmTextField.setText("");
-                        changePasswordConfirmTextField.setForeground(new Color(161,161,161));
-                        showHintConfirmPassword = false;
-                    }
-                }
-
-                @Override
-                public void focusLost(FocusEvent e) {
-                    if (changePasswordConfirmTextField.getText().length() == 0) {
-                        changePasswordConfirmTextField.setForeground(new Color(80,80,80));
-                        changePasswordConfirmTextField.setText("Confirm password");
-                        showHintConfirmPassword = true;
-                    }
-                }
-            });
         }
 
         public JPanel getMainSettingsPanel() {
@@ -139,6 +115,52 @@ public class MainPageForm {
                     super.paintComponent(g);
                 }
             };
+
+            changeFirstNameTextField = new JTextField() {
+                @Override
+                protected void paintComponent(Graphics g) {
+                    g.setColor(new Color(27, 27, 27));
+                    g.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
+                    super.paintComponent(g);
+                }
+            };
+
+            changeSurnameTextField = new JTextField() {
+                @Override
+                protected void paintComponent(Graphics g) {
+                    g.setColor(new Color(27, 27, 27));
+                    g.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
+                    super.paintComponent(g);
+                }
+            };
+        }
+    }
+
+    private static class HintText implements FocusListener{
+        private boolean isHintText = true;
+        private final String hintText;
+        private final JTextField textField;
+        private HintText(String text, JTextField textField) {
+            this.hintText = text;
+            this.textField = textField;
+        }
+
+        @Override
+        public void focusGained(FocusEvent e) {
+            if (isHintText) {
+                textField.setText("");
+                textField.setForeground(new Color(161,161,161));
+            }
+            isHintText = false;
+        }
+
+        @Override
+        public void focusLost(FocusEvent e) {
+            if (textField.getText().length() == 0) {
+                textField.setForeground(new Color(80,80,80));
+                textField.setText(hintText);
+                isHintText = true;
+            }
         }
     }
 }
