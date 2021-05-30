@@ -4,7 +4,140 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70d90081-c18e-442a-ab4c-480e7895605b" name="Default Changelist" comment="Ready" />
+    <list default="true" id="70d90081-c18e-442a-ab4c-480e7895605b" name="Default Changelist" comment="Ready">
+      <change afterPath="$PROJECT_DIR$/private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/add-chat-badge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/badge-leaf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/badge-login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/badge-password.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/badge_login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/badge_password.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/button-log-out.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/button-login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/change-password-button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/exit-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/save-nickname-button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/send.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/imgs/settings-badge.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Client/Authorization$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Client/Authorization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Client/ClientSocket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Data/Caching.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Data/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Data/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Data/UserData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/EventHolders/IMessageReceived.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/Enums/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/Enums/MessageAuthor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/Enums/MessageHandlerType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/Enums/MessageType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/IMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/MessageHandlerFactory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/MessageHandlerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/MessageWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/MessageWrapperFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/ReceiveHolders/EditIndexHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/ReceiveHolders/MissedMessagesHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/ReceiveHolders/ReceiveMessageHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/SendHolders/PhoneHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/SendHolders/SendMessageHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Messages/SendHolders/UpdateMissedMessagesHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Server/ServerRequests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Server/WebsocketClient$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Server/WebsocketClient$MessageHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Server/WebsocketClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Utilities/ChatUtilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Utilities/Convert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Utilities/Generator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Utilities/JSONWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Utilities/MessageUtilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Utilities/RSAEncryption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Utilities/UserUtilities$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/com/company/Utilities/UserUtilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/Authorization.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/Convert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/Generator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/RSAEncryption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/ServerRequests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/UserData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/UserUtilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/WebsocketClientEndpoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/pages/login_page/MessengerFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/login_page/MessengerFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/pages/login_page/MessengerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/login_page/MessengerFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/pages/main_page/MainPageForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/main_page/MainPageForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/pages/main_page/MainPageForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/main_page/MainPageForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leafroot/pages/main_page/SettingsForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/main_page/SettingsForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Client/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Client/Authorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Client/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Client/ClientSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Data/Caching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Data/Caching.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Data/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Data/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Data/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Data/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Data/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Data/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/EventHolders/IMessageReceived.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/EventHolders/IMessageReceived.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/Enums/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/Enums/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/Enums/MessageAuthor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/Enums/MessageAuthor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/Enums/MessageHandlerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/Enums/MessageHandlerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/Enums/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/Enums/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/IMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/IMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/MessageHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/MessageHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/MessageWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/MessageWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/MessageWrapperFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/MessageWrapperFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/ReceiveHolders/EditIndexHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/ReceiveHolders/EditIndexHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/ReceiveHolders/MissedMessagesHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/ReceiveHolders/MissedMessagesHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/ReceiveHolders/ReceiveMessageHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/ReceiveHolders/ReceiveMessageHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/SendHolders/PhoneHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/SendHolders/PhoneHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/SendHolders/SendMessageHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/SendHolders/SendMessageHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Messages/SendHolders/UpdateMissedMessagesHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/SendHolders/UpdateMissedMessagesHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Server/ServerRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Server/ServerRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Server/WebsocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Server/WebsocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Utilities/ChatUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Utilities/ChatUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Utilities/Convert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Utilities/Convert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Utilities/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Utilities/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Utilities/JSONWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Utilities/JSONWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Utilities/MessageUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Utilities/MessageUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Utilities/RSAEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Utilities/RSAEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/com/company/Utilities/UserUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Utilities/UserUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/Authorization$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/Authorization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/Convert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/Generator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/RSAEncryption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/ServerRequests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/UserData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/UserUtilities$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/UserUtilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/WebsocketClientEndpoint$MessageHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/WebsocketClientEndpoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/login_page/MessengerFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/login_page/MessengerFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/login_page/MessengerFrame$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/login_page/MessengerFrame$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/login_page/MessengerFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/main_page/MainPageForm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/main_page/MainPageForm$HintText.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/main_page/MainPageForm$SettingsForm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/main_page/MainPageForm$SettingsForm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/main_page/MainPageForm$SettingsForm$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/main_page/MainPageForm$SettingsForm$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/main_page/MainPageForm$SettingsForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/leafroot/pages/main_page/MainPageForm.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +164,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1tDjmpzTDNbqsKgSqjCKrvxiJkB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,7 +176,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/org/leafroot/Server" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,12 +184,26 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org/leafroot/Server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org/leafroot" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="src" />
+      <module name="AOProject_leafroot" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.Messages.Enums.*" />
@@ -127,6 +276,7 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ready" />
+    <MESSAGE value="Commit for Albert to fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit for Albert to fix bugs" />
   </component>
 </project>
