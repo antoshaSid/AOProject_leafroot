@@ -15,9 +15,12 @@ public class MainPageForm {
     private JTextField textField;
     private JButton sendButton;
     private JPanel settingsPanel;
-    private JPanel chatsPanel;
     private JButton addChatButton;
     private JButton settingsButton;
+    private JScrollPane chatsScroll;
+    private JList<String> listOfChats;
+    private JLabel chatsLabel;
+    private DefaultListModel<String> listModelOfChats;
 
     public MainPageForm() {
         textField.setBorder(BorderFactory.createEmptyBorder(0,10,0,0));
@@ -25,21 +28,31 @@ public class MainPageForm {
         sendButton.setBorder(BorderFactory.createEmptyBorder());
         addChatButton.setBorder(BorderFactory.createEmptyBorder());
         settingsButton.setBorder(BorderFactory.createEmptyBorder());
+        chatsScroll.setBorder(BorderFactory.createEmptyBorder());
+        ((DefaultListCellRenderer)listOfChats.getCellRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
+
         settingsButton.addActionListener(e -> {
             splitPane.setLeftComponent(settingsForm.getMainSettingsPanel());
             splitPane.repaint();
         });
+
+        addChatButton.addActionListener(e -> {
+            listModelOfChats.addElement((String) JOptionPane.showInputDialog(mainFramePanel, "Enter phone number", "Chat with", JOptionPane.QUESTION_MESSAGE,
+                    new ImageIcon("src/main/resources/imgs/badge-leaf.png"), null, null));
+            listModelOfChats.trimToSize();
+        });
+
+
         settingsButton.setIcon(new ImageIcon("src/main/resources/imgs/settings-badge.png"));
         addChatButton.setIcon(new ImageIcon("src/main/resources/imgs/add-chat-badge.png"));
         sendButton.setIcon(new ImageIcon("src/main/resources/imgs/send.png"));
-    }
 
-    public JPanel getMainFramePanel() {
-        return this.mainFramePanel;
     }
-
 
     private void createUIComponents() {
+        listModelOfChats = new DefaultListModel<>();
+        listOfChats = new JList<>(listModelOfChats);
+        listOfChats.setBorder(BorderFactory.createEmptyBorder());
         textField = new JTextField() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -50,8 +63,11 @@ public class MainPageForm {
         };
     }
 
+    public JPanel getMainFramePanel() {
+        return this.mainFramePanel;
+    }
+
     private class SettingsForm {
-    //    private final MainPageForm mainPageForm = new MainPageForm();
         private JPanel mainSettingsPanel;
         private JPanel topPanel;
         private JButton exitButton;

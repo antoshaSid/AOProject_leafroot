@@ -24,7 +24,7 @@ public final class MessageHandlerFactory {
         return message -> {
             ReceiveMessageHolder receiveMessageHolder = JSONWrapper.decode(message.message, ReceiveMessageHolder.class);
             Caching.storeReceived(receiveMessageHolder);
-            User.invokeOnMessageReceived(receiveMessageHolder);
+//            User.invokeOnMessageReceived(receiveMessageHolder);
             System.out.println(MessageUtilities.getDecodedTextMessage(receiveMessageHolder.getMessageForTo()));
         };
     }
