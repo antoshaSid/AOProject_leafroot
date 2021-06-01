@@ -17,8 +17,9 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
 //        ChatUtilities.getAllChatPhones();
-        String login = "380500757695";
+        String login = "380500757682";
         String password = "1q2w3e4r5t";
+
         if(UserUtilities.getUserByPhone(login) == null)
             Authorization.signUp(login,"name", "surname", password, "desc");
         else if (!Authorization.loadSession())

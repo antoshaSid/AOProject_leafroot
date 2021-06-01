@@ -5,22 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70d90081-c18e-442a-ab4c-480e7895605b" name="Default Changelist" comment="Ready">
-      <change afterPath="$PROJECT_DIR$/AOProject_leafroot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/AOProject_leafroot_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/AOProject_leafroot_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/login_page/RegistrationFrame.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/login_page/RegistrationFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/main_page/MainChatPanel.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/main_page/MainChatPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imgs/button-sign-up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imgs/person.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/private.key" beforeDir="false" afterPath="$PROJECT_DIR$/private.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Client/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Client/Authorization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Messages/MessageHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Messages/MessageHandlerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/pages/login_page/MessengerFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/login_page/MessengerFrame.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/pages/login_page/MessengerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/login_page/MessengerFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/pages/main_page/MainPageForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/main_page/MainPageForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/pages/main_page/MainPageForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/pages/main_page/MainPageForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Data/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Data/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/EventHolders/IMessageReceived.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/EventHolders/IMessageReceived.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Client/Authorization$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Client/Authorization$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Client/Authorization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Client/Authorization.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Messages/MessageHandlerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Messages/MessageHandlerFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/pages/login_page/MessengerFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/pages/login_page/MessengerFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/pages/login_page/MessengerFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/pages/login_page/MessengerFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/pages/login_page/MessengerFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/pages/login_page/MessengerFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/pages/login_page/MessengerFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/pages/login_page/MessengerFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/pages/login_page/MessengerFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/pages/login_page/MessengerFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/pages/main_page/MainPageForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/pages/main_page/MainPageForm$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/pages/main_page/MainPageForm$HintText.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/pages/main_page/MainPageForm$HintText.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/pages/main_page/MainPageForm$SettingsForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/pages/main_page/MainPageForm$SettingsForm$1.class" afterDir="false" />
@@ -64,6 +68,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -88,6 +93,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/org/leafroot/Server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/imgs" />
       <recent name="$PROJECT_DIR$/src/main/java/org/leafroot" />
     </key>
   </component>
@@ -120,6 +126,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RegistrationFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.pages.login_page.RegistrationFrame" />
+      <module name="AOProject_leafroot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.pages.login_page.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -134,6 +153,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MessengerFrame" />
+        <item itemvalue="Application.RegistrationFrame" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -159,7 +179,9 @@
       <workItem from="1622488660726" duration="181000" />
       <workItem from="1622488858973" duration="1293000" />
       <workItem from="1622490457260" duration="92000" />
-      <workItem from="1622490569677" duration="8051000" />
+      <workItem from="1622490569677" duration="8312000" />
+      <workItem from="1622575254519" duration="1741000" />
+      <workItem from="1622577014152" duration="10219000" />
     </task>
     <task id="LOCAL-00001" summary="Ready">
       <created>1622376420190</created>
@@ -182,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622385226928</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Создана панельна чатов">
+      <created>1622499160062</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622499160062</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,12 +242,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Ready" />
     <MESSAGE value="Commit for Albert to fix bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit for Albert to fix bugs" />
+    <MESSAGE value="Создана панельна чатов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создана панельна чатов" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

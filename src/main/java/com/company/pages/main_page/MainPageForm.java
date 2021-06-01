@@ -1,66 +1,70 @@
 package com.company.pages.main_page;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainPageForm {
     private final SettingsForm settingsForm = new SettingsForm();
+    private final Map<String, JPanel> userChatsMap;
     private JPanel mainFramePanel;
     private JSplitPane splitPane;
     private JPanel leftPanel;
     private JPanel rightPanel;
-    private JPanel textFieldPanel;
-    private JTextField textField;
-    private JButton sendButton;
     private JPanel settingsPanel;
     private JButton addChatButton;
     private JButton settingsButton;
     private JScrollPane chatsScroll;
     private JList<String> listOfChats;
     private JLabel chatsLabel;
-    private DefaultListModel<String> listModelOfChats;
+    private JLabel noChatsLabel;
+    private DefaultListModel<String> listModelOfLeftChats;
 
     public MainPageForm() {
-        textField.setBorder(BorderFactory.createEmptyBorder(0,10,0,0));
-        textField.setOpaque(false);
-        sendButton.setBorder(BorderFactory.createEmptyBorder());
+        userChatsMap = new HashMap<>();
         addChatButton.setBorder(BorderFactory.createEmptyBorder());
         settingsButton.setBorder(BorderFactory.createEmptyBorder());
         chatsScroll.setBorder(BorderFactory.createEmptyBorder());
+        listOfChats.setBorder(BorderFactory.createEmptyBorder());
+
         ((DefaultListCellRenderer)listOfChats.getCellRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 
         settingsButton.addActionListener(e -> {
             splitPane.setLeftComponent(settingsForm.getMainSettingsPanel());
-            splitPane.repaint();
         });
 
         addChatButton.addActionListener(e -> {
-            listModelOfChats.addElement((String) JOptionPane.showInputDialog(mainFramePanel, "Enter phone number", "Chat with", JOptionPane.QUESTION_MESSAGE,
-                    new ImageIcon("src/main/resources/imgs/badge-leaf.png"), null, null));
-            listModelOfChats.trimToSize();
+            String phoneNumber = (String) JOptionPane.showInputDialog(mainFramePanel, "Enter phone number", "Chat with", JOptionPane.QUESTION_MESSAGE,
+                    new ImageIcon("src/main/resources/imgs/badge-leaf.png"), null, null);
+            if (!userChatsMap.containsKey(phoneNumber)) {
+                listModelOfLeftChats.addElement(phoneNumber);
+                userChatsMap.put(phoneNumber, new MainChatPanel().getChatPanel());
+            }
         });
 
+        listOfChats.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                splitPane.setRightComponent(userChatsMap.get(listOfChats.getSelectedValue()));
+
+            }
+        });
 
         settingsButton.setIcon(new ImageIcon("src/main/resources/imgs/settings-badge.png"));
         addChatButton.setIcon(new ImageIcon("src/main/resources/imgs/add-chat-badge.png"));
-        sendButton.setIcon(new ImageIcon("src/main/resources/imgs/send.png"));
 
     }
 
     private void createUIComponents() {
-        listModelOfChats = new DefaultListModel<>();
-        listOfChats = new JList<>(listModelOfChats);
-        listOfChats.setBorder(BorderFactory.createEmptyBorder());
-        textField = new JTextField() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                g.setColor(new Color(44, 44, 44));
-                g.fillRoundRect(0, 0, getWidth() - 1, getHeight() - 1, 20, 20);
-                super.paintComponent(g);
-            }
-        };
+        rightPanel = new JPanel();
+        listModelOfLeftChats = new DefaultListModel<>();
+        listOfChats = new JList<>(listModelOfLeftChats);
+        chatsScroll = new JScrollPane(listOfChats);
     }
 
     public JPanel getMainFramePanel() {
@@ -151,6 +155,19 @@ public class MainPageForm {
             };
         }
     }
+
+//    private static class MyListCellRenderer extends JLabel implements ListCellRenderer<JLabel> {
+//        public MyListCellRenderer() {
+//            setOpaque(true);
+//        }
+//
+//        @Override
+//        public Component getListCellRendererComponent(JList<? extends JLabel> list, JLabel value, int index, boolean isSelected, boolean cellHasFocus) {
+//            setIcon(new ImageIcon("src/main/resources/imgs/person.png"));
+//            setHorizontalAlignment(SwingConstants.CENTER);
+//            return this;
+//        }
+//    }
 
     private static class HintText implements FocusListener{
         private boolean isHintText = true;

@@ -11,6 +11,7 @@ import com.company.Utilities.Generator;
 import com.company.Utilities.RSAEncryption;
 import com.company.Utilities.UserUtilities;
 
+import javax.swing.*;
 import java.io.*;
 import java.net.URISyntaxException;
 import java.security.*;
@@ -43,15 +44,18 @@ public final class Authorization {
     }
 
     //Вход
-    public static void logIn(String phone, String password) throws NoSuchAlgorithmException, IOException, InvalidKeySpecException, URISyntaxException, InterruptedException {
+    public static boolean logIn(String phone, String password) throws NoSuchAlgorithmException, IOException, InvalidKeySpecException, URISyntaxException, InterruptedException {
 
         UserData tempData = UserUtilities.getUserByPhone(phone);
         if(!Generator.computeSHA256(password,"").equals(tempData.password)) {
             System.out.println("Wrong Password");
-            return;
+            JOptionPane.showMessageDialog(null, "Wrong Password!", "Wrong Password", JOptionPane.ERROR_MESSAGE,
+                    new ImageIcon("src/main/resources/imgs/badge-leaf.png"));
+            return false;
         }
         loadUser(phone);
         createSession();
+        return true;
     }
 
     //Создание сессии
@@ -70,7 +74,7 @@ public final class Authorization {
              BufferedWriter b = new BufferedWriter(f);
              PrintWriter p = new PrintWriter(b);) {
             p.println(User.data.phone);
-            p.println(generateSessionToken(User.data.phone,UserUtilities.getDeviceID()));
+            p.println(generateSessionToken(User.data.phone, UserUtilities.getDeviceID()));
         } catch (IOException i) {
             i.printStackTrace();
         }
