@@ -24,8 +24,10 @@ public class MainPageForm {
     private JLabel chatsLabel;
     private JLabel noChatsLabel;
     private DefaultListModel<String> listModelOfLeftChats;
+    private final String userPhone;
 
-    public MainPageForm() {
+    public MainPageForm(String userPhone) {
+        this.userPhone = userPhone;
         userChatsMap = new HashMap<>();
         addChatButton.setBorder(BorderFactory.createEmptyBorder());
         settingsButton.setBorder(BorderFactory.createEmptyBorder());
@@ -43,7 +45,7 @@ public class MainPageForm {
                     new ImageIcon("src/main/resources/imgs/badge-leaf.png"), null, null);
             if (!userChatsMap.containsKey(phoneNumber)) {
                 listModelOfLeftChats.addElement(phoneNumber);
-                userChatsMap.put(phoneNumber, new MainChatPanel().getChatPanel());
+                userChatsMap.put(phoneNumber, new MainChatPanel(userPhone, phoneNumber).getChatPanel());
             }
         });
 
