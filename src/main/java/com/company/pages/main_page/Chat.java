@@ -109,9 +109,6 @@ public class Chat {
         mainListOfYourChat = new JList<>(listModelOfLeftChat);
         chatScrollPanel = new JScrollPane(mainListOfMyChat);
 
-
-
-
         textField = new JTextField() {
             @Override
             protected void paintComponent(Graphics g) {

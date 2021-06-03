@@ -33,7 +33,6 @@ public final class ClientSocket {
                 e.printStackTrace();
             }
         }
-        System.out.println("DFADFSSDF");
        clientEndPoint.sendMessage(JSONWrapper.encode(data));
     }
 
