@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public final class ChatUtilities {
 
     public static String[] getAllChatPhones(){
-        File chatsPath = new File(Config.CHAT_CACHE_PATH);
+        File chatsPath = Config.CHAT_CACHE_PATH.toFile();
         String contents[] = chatsPath.list();
         if (contents != null) {
             for (int i = 0; i < contents.length; i++) {

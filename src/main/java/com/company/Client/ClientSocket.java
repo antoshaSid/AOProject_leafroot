@@ -1,5 +1,7 @@
 package com.company.Client;
 
+import com.company.Data.Caching;
+import com.company.Messages.SendHolders.SendMessageHolder;
 import com.company.Server.WebsocketClient;
 import com.company.Utilities.JSONWrapper;
 import com.company.Messages.SendHolders.PhoneHolder;
@@ -7,6 +9,7 @@ import com.company.Messages.Enums.Command;
 import com.company.Messages.MessageWrapper;
 import com.company.Data.User;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -23,7 +26,14 @@ public final class ClientSocket {
     public static void send(MessageWrapper data) {
         if (clientEndPoint == null)
             throw new NullPointerException();
-
+        if(data.command == Command.Send) {
+            try {
+                Caching.storeSent(JSONWrapper.decode(data.message, SendMessageHolder.class));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("DFADFSSDF");
        clientEndPoint.sendMessage(JSONWrapper.encode(data));
     }
 

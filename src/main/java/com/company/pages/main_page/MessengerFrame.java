@@ -1,17 +1,24 @@
 package com.company.pages.main_page;
 
+import com.company.Data.Caching;
+import com.company.Data.User;
+import com.company.Data.UserData;
+import com.company.Utilities.MessageUtilities;
+import com.company.Utilities.UserUtilities;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainPageForm {
+public class MessengerFrame {
     private final SettingsForm settingsForm = new SettingsForm();
-    private final Map<String, JPanel> userChatsMap;
+    private final Map<String, Chat> userChatsMap;
     private JPanel mainFramePanel;
     private JSplitPane splitPane;
     private JPanel leftPanel;
@@ -24,11 +31,12 @@ public class MainPageForm {
     private JLabel chatsLabel;
     private JLabel noChatsLabel;
     private DefaultListModel<String> listModelOfLeftChats;
-    private final String userPhone;
+    private final UserData userData;
 
-    public MainPageForm(String userPhone) {
-        this.userPhone = userPhone;
+    public MessengerFrame(UserData userData) {
+        this.userData = userData;
         userChatsMap = new HashMap<>();
+
         addChatButton.setBorder(BorderFactory.createEmptyBorder());
         settingsButton.setBorder(BorderFactory.createEmptyBorder());
         chatsScroll.setBorder(BorderFactory.createEmptyBorder());
@@ -39,23 +47,35 @@ public class MainPageForm {
         settingsButton.addActionListener(e -> {
             splitPane.setLeftComponent(settingsForm.getMainSettingsPanel());
         });
-
         addChatButton.addActionListener(e -> {
             String phoneNumber = (String) JOptionPane.showInputDialog(mainFramePanel, "Enter phone number", "Chat with", JOptionPane.QUESTION_MESSAGE,
                     new ImageIcon("src/main/resources/imgs/badge-leaf.png"), null, null);
+            if (phoneNumber == null)
+                return;
+            if (UserUtilities.getUserByPhone(phoneNumber) == null) {
+                JOptionPane.showMessageDialog(mainFramePanel, "Entered user doesn't exist", "Wrong user", JOptionPane.ERROR_MESSAGE,
+                        new ImageIcon("src/main/resources/imgs/badge-leaf.png"));
+                return;
+            }
             if (!userChatsMap.containsKey(phoneNumber)) {
                 listModelOfLeftChats.addElement(phoneNumber);
-                userChatsMap.put(phoneNumber, new MainChatPanel(userPhone, phoneNumber).getChatPanel());
+                userChatsMap.put(phoneNumber, new Chat(userData.phone, phoneNumber));
             }
         });
 
         listOfChats.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                splitPane.setRightComponent(userChatsMap.get(listOfChats.getSelectedValue()));
-
+                splitPane.setRightComponent(userChatsMap.get(listOfChats.getSelectedValue()).getChatPanel());
             }
         });
+
+        User.addOnMessageReceivedHandler(e -> {
+            userChatsMap.get(e.getFrom()).getListModelOfLeftChat().addElement(MessageUtilities.getDecodedTextMessage(e.getMessageForTo()));
+            userChatsMap.get(e.getFrom()).getListModelOfRightChat().addElement("");
+        });
+
+        Caching.loadFromCache(listModelOfLeftChats, userChatsMap, userData);
 
         settingsButton.setIcon(new ImageIcon("src/main/resources/imgs/settings-badge.png"));
         addChatButton.setIcon(new ImageIcon("src/main/resources/imgs/add-chat-badge.png"));
@@ -156,20 +176,8 @@ public class MainPageForm {
                 }
             };
         }
-    }
 
-//    private static class MyListCellRenderer extends JLabel implements ListCellRenderer<JLabel> {
-//        public MyListCellRenderer() {
-//            setOpaque(true);
-//        }
-//
-//        @Override
-//        public Component getListCellRendererComponent(JList<? extends JLabel> list, JLabel value, int index, boolean isSelected, boolean cellHasFocus) {
-//            setIcon(new ImageIcon("src/main/resources/imgs/person.png"));
-//            setHorizontalAlignment(SwingConstants.CENTER);
-//            return this;
-//        }
-//    }
+    }
 
     private static class HintText implements FocusListener{
         private boolean isHintText = true;

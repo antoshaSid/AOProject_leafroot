@@ -48,8 +48,10 @@ public class RSAEncryption {
     private void SavePrivateKey(){
 
         try{
+            File keyFile = new File(Config.PRIVATE_KEY_PATH);
+            if (keyFile.exists())
+                keyFile.delete();
             PrivateKey privateKey = keyPair.getPrivate();
-
             PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(
                     privateKey.getEncoded());
             FileOutputStream fos = new FileOutputStream(Config.PRIVATE_KEY_PATH);

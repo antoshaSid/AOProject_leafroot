@@ -17,13 +17,18 @@ import java.util.HashMap;
 //Методя для удобной работы с юезрами
 public final class UserUtilities {
 
-    public static UserData getUserByPhone(String userID) throws IOException {
+    public static UserData getUserByPhone(String userID) {
 
         var postData = new HashMap<String, String>() {{
             put("id", String.valueOf(userID));
         }};
 
-        var postResponse = ServerRequests.post(Config.SERVER_GET_USER, Convert.hashMapToPostString(postData));
+        String postResponse = null;
+        try {
+            postResponse = ServerRequests.post(Config.SERVER_GET_USER, Convert.hashMapToPostString(postData));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         var user = new Gson().fromJson(postResponse, UserData.class);
         return user;

@@ -58,7 +58,8 @@ public class RegistrationFrame extends JFrame {
 
         registerButton.addActionListener(e -> {
             try {
-                Authorization.signUp(loginTextField.getText(),loginTextField.getText(), "", passwordTextField.getText(), "");
+                String temp = loginTextField.getText();
+                Authorization.signUp(temp, temp, "", passwordTextField.getText(), "");
             } catch (NoSuchAlgorithmException | InterruptedException | URISyntaxException | InvalidKeySpecException | IOException noSuchAlgorithmException) {
                 noSuchAlgorithmException.printStackTrace();
             }

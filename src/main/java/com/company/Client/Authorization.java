@@ -14,6 +14,7 @@ import com.company.Utilities.UserUtilities;
 import javax.swing.*;
 import java.io.*;
 import java.net.URISyntaxException;
+import java.nio.file.Files;
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 import java.util.HashMap;
@@ -54,25 +55,27 @@ public final class Authorization {
             return false;
         }
         loadUser(phone);
-        createSession();
+//        createSession();
         return true;
     }
 
     //Создание сессии
     private static void createSession(){
         createCacheFolderIfNeeded();
-        File session = new File(Config.SESSION_PATH);
-        if(!session.exists()) {
-            try {
-                session.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        File session = Config.SESSION_PATH.toFile();
+        if (session.exists())
+            session.delete();
+
+        try {
+            session.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-        try (FileWriter f = new FileWriter(Config.SESSION_PATH, true);
+
+        try (FileWriter f = new FileWriter(Config.SESSION_PATH.toFile(), true);
              BufferedWriter b = new BufferedWriter(f);
-             PrintWriter p = new PrintWriter(b);) {
+             PrintWriter p = new PrintWriter(b)) {
             p.println(User.data.phone);
             p.println(generateSessionToken(User.data.phone, UserUtilities.getDeviceID()));
         } catch (IOException i) {
@@ -86,7 +89,7 @@ public final class Authorization {
 
         String phone = "";
         String token = "";
-        File file = new File(Config.SESSION_PATH);
+        File file = Config.SESSION_PATH.toFile();
 
         if(!file.exists())
             return false;
@@ -125,7 +128,7 @@ public final class Authorization {
     {
         try {
             ClientSocket.initialize(Config.SERVER_IP,Config.SERVER_PORT,phone);
-            ClientSocket.send(MessageWrapperFactory.createUpdateMissedMessageWrapper(new UpdateMissedMessagesHolder(phone)));
+//            ClientSocket.send(MessageWrapperFactory.createUpdateMissedMessageWrapper(new UpdateMissedMessagesHolder(phone)));
             User.data = UserUtilities.getUserByPhone(phone);
             RSAEncryption rsaEncryption = new RSAEncryption();
             rsaEncryption.loadKeyPair(User.data.phone);
@@ -139,14 +142,11 @@ public final class Authorization {
     //Создания всяких папаок для кэша если надо
     public static void createCacheFolderIfNeeded() {
 
-        File cacheFolder = new File(Config.CACHE_PATH);
-        if (!cacheFolder.exists()) {
-            cacheFolder.mkdirs();
-        }
-
-        File chatCacheFolder = new File(Config.CHAT_CACHE_PATH);
-        if (!chatCacheFolder.exists()) {
-            chatCacheFolder.mkdirs();
+        try {
+            Files.createDirectories(Config.CACHE_PATH);
+            Files.createDirectories(Config.CHAT_CACHE_PATH);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
